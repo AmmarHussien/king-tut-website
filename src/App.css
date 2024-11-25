@@ -1,0 +1,105 @@
+/* Root styles for all screens */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Default animation */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 1rem auto;
+  background-color: #fff;
+  max-width: 600px;
+  width: 100%; /* Make sure the card doesn't exceed the screen width */
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Responsive styles for tablets and mobile */
+@media (max-width: 1024px) {
+  #root {
+    padding: 1.5rem;
+  }
+
+  .logo {
+    height: 5em; /* Slightly smaller for tablets */
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1.5em;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+
+  .logo {
+    height: 4em; /* Smaller for mobile */
+    padding: 0.5em;
+  }
+
+  .card {
+    padding: 1em;
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  #root {
+    padding: 0.5rem;
+  }
+
+  .logo {
+    height: 3.5em; /* Adjust for small screens */
+  }
+
+  .card {
+    padding: 0.8em;
+    max-width: 100%;
+  }
+
+  .read-the-docs {
+    font-size: 0.9em; /* Adjust text size */
+  }
+}
